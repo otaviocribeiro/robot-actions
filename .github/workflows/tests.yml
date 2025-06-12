@@ -43,11 +43,11 @@ jobs:
         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
         report_path: logs
 
-    - name: Upload a Build Artifact
+    - name: Upload a Build Artifact Chrome
       uses: actions/upload-artifact@v4.6.2
       if: always()
       with:
-        name: Test Report 
+        name: Test Report Chrome
         path: logs
 
   firefox:
@@ -86,9 +86,9 @@ jobs:
         gh_access_token: ${{ secrets.GITHUB_TOKEN }}
         report_path: logs
 
-    - name: Upload a Build Artifact
+    - name: Upload a Build Artifact Firefox
       uses: actions/upload-artifact@v4.6.2
       if: always()
       with:
-        name: Test Report 
+        name: Test Report Firefox
         path: logs
